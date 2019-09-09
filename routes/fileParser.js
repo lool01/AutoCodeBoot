@@ -24,13 +24,10 @@ function toStudent(file, filepath){
         else
             throw new Error("More then one file in folder, cannot choose...");
 
-        //console.log(zipFile);
-
         let studentFiles = [];
 
         let zip = admzip(zipFile);
         zip.getEntries().forEach((entry) => {
-            //console.log(entry)
             if(entry.entryName.endsWith(".js") && !entry.entryName.startsWith("__MAC")){
                 let data = entry.getData();
 

@@ -4,7 +4,7 @@ block content
     each studentWork in students
         h1=studentWork.name
         if studentWork.error
-            h2=studentWork.error.status
+            h2=studentWork.error.stack
         else
             each file in studentWork.files
                 h2=file.name
