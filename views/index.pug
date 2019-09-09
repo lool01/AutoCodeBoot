@@ -1,0 +1,7 @@
+extends layout
+
+block content
+  select(name='dropDown', id='haha')
+    each val in directories
+      option=val
+  button(onclick="window.location.href+=document.getElementById(\"haha\").value") GO !

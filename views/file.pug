@@ -1,0 +1,14 @@
+extends layout
+
+block content
+    each studentWork in students
+        h1=studentWork.name
+        if studentWork.error
+            h2=studentWork.error.status
+        else
+            each file in studentWork.files
+                h2=file.name
+                textarea(rows="20" cols="100")=file.content
+                textarea(rows="5" cols="100")=file.result
+
+
